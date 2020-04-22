@@ -1,0 +1,42 @@
+.bookings__list-item {
+    margin: 1rem 0;
+    height: 10rem;
+    padding: 1rem;
+    border: 1px solid #999999;
+    display: flex;
+    box-shadow: 7px 5px 3px #999999;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookings__list-item h1 {
+    position: relative;
+    margin: 0;
+    left: 40rem;
+    top: -7.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.bookings__list-item p {
+    position: relative;
+    margin: 0;
+    left: 36.5rem;
+    top: -6rem;
+}
+
+.bookings__list-item button {
+    position: relative;
+    margin: 0;
+    left: 37rem;
+    top: -3rem;
+    width: 10rem;
+}
+
+.bookings__list-item img {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+    top: 2rem;
+    border-radius: 1rem;
+}
