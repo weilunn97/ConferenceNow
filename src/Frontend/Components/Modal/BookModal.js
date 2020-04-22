@@ -1,11 +1,29 @@
 import React, {Component} from 'react';
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import './BookModal.css';
 
 class BookModal extends Component {
 
-    componentDidMount() {
-        console.log(this.props.room);
+    state = {
+        selectedDate: new Date()
+    };
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        // COMPUTE OUR EXCLUDED DATES
+        const room = this.props.room;
+        let date = this.state.selectedDate;
+        date.setHours(0, 0, 0, 0);
+        date = date.toISOString();
+        const availabilityOnDate = room.availability[date];
+        console.log('PICKED DATE  : '+ date);
+        console.log('AVAILABILITY : ' + availabilityOnDate[0]);
+    };
+
+    changeDate = date => {
+        this.setState({
+            selectedDate: date
+        })
     }
 
     render() {
@@ -14,10 +32,11 @@ class BookModal extends Component {
                 <header className="bookmodal__header">
                     <h1>{this.props.title}</h1>
                 </header>
-                <section className="bookmodal__content">{this.props.children}</section>
-                <section className="bookmodal__calendar">
-                    <DatePicker selected={startDate} onChange={date => setStartDate(new Date()} />
-                </section>
+                <section className="bookmodal__content">Select A Date</section>
+                <DatePicker className="bookmodal_calendar"
+                    selected={this.state.selectedDate}
+                    onChange={this.changeDate}
+                    minDate={new Date()}/>
                 <section className="bookmodal__actions">
                     {this.props.canCancel && (
                         <button className="btn" onClick={this.props.onCancel}>
