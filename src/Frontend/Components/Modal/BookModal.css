@@ -1,52 +1,53 @@
 .bookmodal {
-  width: 90vw;
-  height: 80vh;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  position: fixed;
-  top: 15vh;
-  left: 5%;
-  z-index: 100;
+    width: 90vw;
+    height: 80vh;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    position: fixed;
+    top: 15vh;
+    left: 5%;
+    z-index: 100;
 }
 
-.bookmodal_calendar {
-  position: relative;
-  left: 42.5vw;
-  height: 1rem;
-  width: 6rem;
+.bookmodal__calendar {
+    position: relative;
+    left: 42.5vw;
+    height: 1.3rem;
+    width: 9.5vw;
+    font-size: 1rem;
 }
 
 .bookmodal__header {
-  padding: 1rem;
-  background: #5101d1;
-  color: white;
+    padding: 1rem;
+    background: #5101d1;
+    color: white;
 }
 
 .bookmodal__header h1 {
-  margin: 0;
-  font-size: 1.25rem;
+    margin: 0;
+    font-size: 1.25rem;
 }
 
 .bookmodal__content {
-  position: relative;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  left: 41vw;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    left: 41vw;
 
 }
 
 .bookmodal__actions {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-  top: 12.5rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    top: 12rem;
 }
 
 @media (min-width: 768px) {
-  .bookmodal {
-    width: 90vw;
-  }
+    .bookmodal {
+        width: 90vw;
+    }
 }

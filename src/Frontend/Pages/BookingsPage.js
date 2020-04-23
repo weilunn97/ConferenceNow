@@ -2,11 +2,8 @@ import React, {Component} from 'react';
 import BookingsList from "../Components/Booking/BookingsList";
 import './Pages.css';
 import Snackbar from "@material-ui/core/Snackbar";
-import MuiAlert from '@material-ui/lab/Alert';
+import {Alert} from "../helpers/helpers";
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
 
 class BookingsPage extends Component {
     state = {

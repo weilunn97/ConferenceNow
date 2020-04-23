@@ -1,28 +1,27 @@
 import React, {Component} from 'react';
 import RoomList from "../Components/Book/RoomList"
 import './Pages.css';
-import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from "@material-ui/core/Snackbar";
+import {Alert} from "../helpers/helpers";
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
 
 class BookPage extends Component {
 
     state = {
-        bookingSuccess: false
+        bookingSuccess: false,
+        bookedRoom: null
     };
 
     bookRoomHandler = (room, user, date, timeslot) => {
         room.bookTimeslot(date, timeslot);
-        user.addBooking(room, date, timeslot)
+        user.addBooking(room, date, timeslot);
         this.setState({
-            bookingSuccess: true
+            bookingSuccess: true,
+            bookedRoom: room
         });
     };
 
-    dismissSuccessMesssage = () => {
+    dismissSuccessMessage = () => {
         this.setState({
             bookingSuccess: false
         })
@@ -32,12 +31,13 @@ class BookPage extends Component {
         return (
             <div>
                 {/*DISPLAY BOOKING SUCCESS MESSAGE*/}
-                <Snackbar open={this.state.bookingSuccess} autoHideDuration={3000}
-                          onClose={this.dismissSuccessMesssage}>
-                    <Alert severity="success">
-                        Your booking at {this.props.name} has been confirmed.
-                    </Alert>
-                </Snackbar>
+                {this.state.bookedRoom && (
+                    <Snackbar open={this.state.bookingSuccess} autoHideDuration={5000}
+                              onClose={this.dismissSuccessMessage}>
+                        <Alert severity="success">
+                            Your booking at {this.state.bookedRoom.name} has been confirmed.
+                        </Alert>
+                    </Snackbar>)}
 
                 {/*DISPLAY AVAILABLE ROOMS PAGE*/}
                 <div className="pages">{this.props.company.name} Meeting Rooms</div>

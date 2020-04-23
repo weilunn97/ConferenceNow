@@ -21,13 +21,18 @@ class Room extends Component {
         this.setState({
             bookModal: false,
         });
-        // DEBUG
-        let date = new Date();
-        date.setHours(0, 0, 0, 0);
-        date = date.toISOString();
-        const timeslot = 0;
-        // DEBUG
-        this.props.bookRoomHandler(this.props.room, this.props.user, date, timeslot);
+
+        // GET THE CURRENTLY SELECTED DATE
+        let selectedDate = new Date();
+        selectedDate.setHours(0, 0, 0, 0);
+        selectedDate = selectedDate.toISOString();
+
+        // GET THE CURRENTLY SELECTED TIMESLOT
+        const selectedButton = document.getElementsByClassName("timeslot-selected")[0];
+        const selectedTimeslot = selectedButton.id;
+
+        // BOOK THE ROOM
+        this.props.bookRoomHandler(this.props.room, this.props.user, selectedDate, selectedTimeslot);
     };
 
     render() {

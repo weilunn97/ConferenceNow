@@ -35,34 +35,30 @@ class App extends Component {
                         <MainNavigation/>
                         <main className="main-content">
                             <Switch>
-                                {/*<Route path="/book" company={this.state.company} user={this.state.user}*/}
-                                {/*       component={BookPage}/>*/}
-                                {/*<Route path="/bookings" company={this.state.company} user={this.state.user}*/}
-                                {/*       component={BookingsPage}/>*/}
                                 <Route
                                     path="/book"
                                     render={(routeProps) => (<BookPage {...routeProps}
-                                                             company={this.state.company}
-                                                             user={this.state.user}/>)}/>
+                                                                       company={this.state.company}
+                                                                       user={this.state.user}/>)}/>
 
                                 <Route
                                     path="/bookings"
                                     render={(routeProps) => (<BookingsPage {...routeProps}
-                                                                       company={this.state.company}
-                                                                       user={this.state.user}
-                                                                       cancelBookingHandler={this.cancelBookingHandler}/>)}/>
+                                                                           company={this.state.company}
+                                                                           user={this.state.user}
+                                                                           cancelBookingHandler={this.cancelBookingHandler}/>)}/>
 
-                                        </Switch>
-                                        </main>
-                                        </React.Fragment>
-                                        </BrowserRouter>
-                                        );
-                                        } else {
-                                        return (
-                                        <Spinner/>
-                                        )
-                                        }
-                                        }
-                                        }
+                            </Switch>
+                        </main>
+                    </React.Fragment>
+                </BrowserRouter>
+            );
+        } else {
+            return (
+                <Spinner/>
+            )
+        }
+    }
+}
 
-                                        export default App;
+export default App;

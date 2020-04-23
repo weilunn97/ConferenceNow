@@ -3,13 +3,12 @@ import deluxe_room from "../../media/deluxe_room.jpg";
 import './Booking.css';
 import Modal from "../Modal/Modal";
 import '../../Pages/Pages.css';
-
+import {generateTime} from "../../helpers/helpers";
 
 
 class Booking extends Component {
     state = {
         cancelBookingModal: false,
-        // cancelBookingSuccess: false
     };
 
     openModal = () => {
@@ -23,7 +22,6 @@ class Booking extends Component {
     modalConfirmHandler = () => {
         this.setState({
             cancelBookingModal: false,
-            // cancelBookingSuccess: true
         });
         this.props.cancelBookingHandler(this.props.room, this.props.user, this.props.date, this.props.timeslot);
     };
@@ -33,9 +31,9 @@ class Booking extends Component {
         const meetingStartDate = new Date(this.props.date).toDateString();
         let meetingStartTime;
         if (this.props.timeslot < 12) {
-            meetingStartTime = `${this.props.timeslot + 8} AM`;
+            meetingStartTime = generateTime(this.props.timeslot);
         } else {
-            meetingStartTime = `${this.props.timeslot + 8} PM`;
+            meetingStartTime = generateTime(this.props.timeslot);
         }
         return (
             <React.Fragment>
