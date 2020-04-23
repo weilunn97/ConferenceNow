@@ -19,26 +19,19 @@ class Room {
             dateArr.push(addDays(currDate, i).toISOString());
         }
 
-        // GET TIMESLOT AVAILABILITY
-        const timeslots = Array(this.timeslots).fill(true);
-
         // MAP {DATE : [TIMESLOTS]}
         for (let date of dateArr) {
-            this.availability[date] = timeslots;
+            this.availability[date] = new Array(this.timeslots).fill(true);
         }
     };
 
     bookTimeslot = (date, slotNumber) => {
 
         // CHECK AVAILABILITY FIRST
-        console.log(date, slotNumber);
-        console.log(this.availability[date]);
         if (this.availability[date][slotNumber]) {
             this.availability[date][slotNumber] = false;
-            console.log(`${date} | Slot ${slotNumber} successfully booked.`);
             return true
         } else {
-            console.log(`${date} | Slot ${slotNumber} is taken.`);
             throw new Error("Slot is taken");
         }
     };

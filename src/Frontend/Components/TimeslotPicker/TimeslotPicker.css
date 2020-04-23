@@ -52,7 +52,7 @@
     width: 8rem;
 }
 
-.timeslot-inactive, .timeslot-inactive:hover, .timeslot-active:active {
+.timeslot-inactive, .timeslot-inactive:hover {
     background-color: #b2bec3;
     border-radius: 0.5rem;
     border: none;

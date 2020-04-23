@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
 import Booking from './Booking';
+import React, {Component} from 'react';
 import './BookingsList.css';
 
 class BookingsList extends Component {
@@ -8,6 +8,7 @@ class BookingsList extends Component {
         const bookings = this.props.user.bookings.map(booking => {
             return (
                 <Booking
+                    key={`${booking.user}-${booking.room}-${booking.date}`}
                     user={booking.user}
                     room={booking.room}
                     date={booking.date}

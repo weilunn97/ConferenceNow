@@ -19,19 +19,6 @@ class Company {
     addRoom = room => {
         this.rooms.push(room);
     };
-
-    getRoom = name => {
-        for (let room of this.rooms) {
-            if (name === room.name) {
-                return room
-            }
-        }
-        return null;
-    };
-
-    viewRooms = () => {
-        return this.rooms;
-    };
 }
 
 export default Company;

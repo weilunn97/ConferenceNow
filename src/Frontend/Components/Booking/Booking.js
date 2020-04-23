@@ -1,9 +1,9 @@
+import {generateTime} from "../../helpers/helpers";
+import Modal from "../Modal/Modal";
 import React, {Component} from 'react';
 import deluxe_room from "../../media/deluxe_room.jpg";
 import './Booking.css';
-import Modal from "../Modal/Modal";
 import '../../Pages/Pages.css';
-import {generateTime} from "../../helpers/helpers";
 
 
 class Booking extends Component {

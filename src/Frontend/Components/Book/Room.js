@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import deluxe_room from "../../media/deluxe_room.jpg";
-import './Room.css';
 import BookModal from "../Modal/BookModal";
+import deluxe_room from "../../media/deluxe_room.jpg";
+import React, {Component} from 'react';
 import '../../Pages/Pages.css';
+import './Room.css';
 
 class Room extends Component {
     state = {
@@ -23,7 +23,8 @@ class Room extends Component {
         });
 
         // GET THE CURRENTLY SELECTED DATE
-        let selectedDate = new Date();
+        let selectedDate = document.getElementsByClassName("bookmodal__calendar")[0].value;
+        selectedDate=  new Date(selectedDate);
         selectedDate.setHours(0, 0, 0, 0);
         selectedDate = selectedDate.toISOString();
 

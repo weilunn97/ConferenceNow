@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
 import DatePicker from "react-datepicker";
+import React, {Component} from 'react';
 import TimeslotPicker from "../TimeslotPicker/TimeslotPicker"
 import "react-datepicker/dist/react-datepicker.css";
 import './BookModal.css';
@@ -7,29 +7,32 @@ import './BookModal.css';
 class BookModal extends Component {
 
     state = {
-        selectedDate: null
+        selectedDate: null,
+        availability: null,
     };
 
-    changeDate = date => {
+    componentDidMount() {
+        const currDate = new Date();
+        currDate.setHours(0, 0, 0, 0);
+        const currISODateStr = currDate.toISOString();
+        const currAvail = this.props.room.availability[currISODateStr];
         this.setState({
-            selectedDate: date
+            selectedDate: currDate,
+            availability: currAvail,
         })
     }
 
+    changeDate = date => {
+        const room = this.props.room;
+        date.setHours(0, 0, 0, 0);
+        const availabilityOnDate = room.availability[date.toISOString()];
+        this.setState({
+            selectedDate: date,
+            availability: availabilityOnDate,
+        })
+    };
+
     render() {
-
-        // COMPUTE AVAILABILITY, IF ANY
-        let availabilityOnDate = null;
-        if (this.state.selectedDate) {
-            const room = this.props.room;
-            let date = this.state.selectedDate;
-            date.setHours(0, 0, 0, 0);
-            date = date.toISOString();
-            availabilityOnDate = room.availability[date];
-            console.log('PICKED DATE  : '+ date);
-            console.log('AVAILABILITY : ' + availabilityOnDate[0]);
-        }
-
         return (
             <div className="bookmodal">
                 <header className="bookmodal__header">
@@ -41,12 +44,13 @@ class BookModal extends Component {
                 <DatePicker className="bookmodal__calendar"
                     selected={this.state.selectedDate}
                     onChange={this.changeDate}
-                    minDate={new Date()}/>
+                    minDate={new Date()}
+                    maxDate={new Date().setFullYear(new Date().getFullYear() + 1)}/>
 
                 {/*DISPLAY TIMESLOT PICKER ONLY IF DATES HAVE BEEN SELECTED*/}
-                {availabilityOnDate && (
+                {this.state.availability && (
                 <div>
-                    <TimeslotPicker availability={availabilityOnDate}/>
+                    <TimeslotPicker availability={this.state.availability}/>
                 </div>)}
 
                 {/*DISPLAY ACTION BUTTONS*/}
@@ -64,7 +68,7 @@ class BookModal extends Component {
                 </section>
             </div>
         )
-    }
+    };
 }
 
 export default BookModal;
