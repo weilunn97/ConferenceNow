@@ -6,6 +6,7 @@ import Company from "./Backend/Company";
 import MainNavigation from './Frontend/Components/Navigation/MainNavigation';
 import Spinner from "./Frontend/Components/Spinner/Spinner";
 import User from "./Backend/User";
+import Redirect from "react-router-dom/es/Redirect";
 
 class App extends Component {
     state = {
@@ -35,6 +36,7 @@ class App extends Component {
                         <MainNavigation/>
                         <main className="main-content">
                             <Switch>
+                                <Redirect exact from="/" to="/book" />
                                 <Route
                                     path="/book"
                                     render={(routeProps) => (<BookPage {...routeProps}

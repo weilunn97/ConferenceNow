@@ -23,7 +23,8 @@ class BookPage extends Component {
 
     dismissSuccessMessage = () => {
         this.setState({
-            bookingSuccess: false
+            bookingSuccess: false,
+            bookedRoom: null,
         })
     };
 
