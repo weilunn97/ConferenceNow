@@ -12,12 +12,12 @@ These are the key ⚒ frameworks and tools ⚒ which were used extensively durin
 
 
 ## 📸 Usage & Demo 📸
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/book_page.JPG" /><br><br>
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/book_modal.JPG" /><br><br>
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/book_confirmation.JPG" /><br><br>
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/booking_page.JPG" /><br><br>
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/booking_modal.JPG" /><br><br>
-<img href="https://book-a-room-b504d.web.app" src="readme_mockups/booking_cancellation.JPG" /><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/book_page.JPG" /></a><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/book_modal.JPG" /></a><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/book_confirmation.JPG" /></a><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/booking_page.JPG" /></a><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/booking_modal.JPG" /></a><br><br>
+<a href="https://book-a-room-b504d.web.app" target="_blank"><img src="readme_mockups/booking_cancellation.JPG" /></a><br><br>
 
 
 
