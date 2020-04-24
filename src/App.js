@@ -15,7 +15,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        const my_company = new Company('GovTech');
+        const my_company = new Company('Alhambra Tech');
         const my_user = new User(my_company, 'Tan');
         this.setState({
             company: my_company,
