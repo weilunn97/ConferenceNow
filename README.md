@@ -1,9 +1,9 @@
 ## 💻 Tech Stack 💻
-These are the key ⚒ frameworks and tools ⚒ which were used extensively during the development of 🤝 ConferenceNow 🤝.
+These are the key ⚒ frameworks and tools ⚒ which were used extensively during the development of 🤝[ConferenceNow](https://book-a-room-b504d.web.app/)🤝.
 
-* [React]([https://reactjs.org/](https://reactjs.org/)), one of the most popular frontend 🌐-development frameworks in the market today.
+* [React](https://reactjs.org/), one of the most popular frontend 🌐-development frameworks in the market today.
 
-* [NodeJS]([https://nodejs.org/en/](https://nodejs.org/en/)), to handle our backend logic, the 🧠 of the application.
+* [NodeJS](https://nodejs.org/en/), to handle our backend logic, the 🧠 of the application.
 
 * [HTML / CSS / JavaScript](https://www.javascript.com/), to make the website 🌺🎉💥!
 
