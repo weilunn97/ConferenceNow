@@ -15,12 +15,13 @@
 }
 
 .timeslot-active, .timeslot-active:hover {
-    background-color: lightgreen;
+    background-color: #dff9fb;
     border-radius: 0.5rem;
     box-shadow: none;
     border: none;
-    color: #000;
+    color: #192a56;
     cursor: pointer;
+    font-family: Montserrat, serif;
     font-size: 1rem;
     font-weight: 500;
     height: 3rem;
@@ -34,12 +35,13 @@
 }
 
 .timeslot-selected, .timeslot-selected:hover {
-    background-color: #000000;
+    background-color: #192a56;
     border-radius: 0.5rem;
     box-shadow: none;
     border: 0.1rem;
     color: #ffffff;
     cursor: pointer;
+    font-family: Montserrat, serif;
     font-size: 1rem;
     font-weight: 500;
     height: 3rem;
@@ -59,6 +61,7 @@
     box-shadow: none;
     color: #777777;
     cursor: default;
+    font-family: Montserrat, serif;
     font-size: 1rem;
     font-weight: 500;
     height: 3rem;

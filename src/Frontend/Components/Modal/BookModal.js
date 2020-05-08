@@ -38,7 +38,6 @@ class BookModal extends Component {
                 <header className="bookmodal__header">
                     <h1>{this.props.title}</h1>
                 </header>
-                <section className="bookmodal__content">Select A Date</section>
 
                 {/*DISPLAY DATE PICKER*/}
                 <DatePicker className="bookmodal__calendar"
@@ -56,12 +55,12 @@ class BookModal extends Component {
                 {/*DISPLAY ACTION BUTTONS*/}
                 <section className="bookmodal__actions">
                     {this.props.canCancel && (
-                        <button className="btn" onClick={this.props.onCancel}>
+                        <button onClick={this.props.onCancel}>
                             Cancel
                         </button>
                     )}
                     {this.props.canConfirm && (
-                        <button className="btn" onClick={this.props.onConfirm}>
+                        <button onClick={this.props.onConfirm}>
                             {this.props.confirmText}
                         </button>
                     )}

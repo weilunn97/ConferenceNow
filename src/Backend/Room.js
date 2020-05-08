@@ -1,11 +1,12 @@
 import {addDays} from 'date-fns';
 
 class Room {
-    constructor(name, capacity, timeslots = 12) {
+    constructor(name, capacity, timeslots = 12, videoConf = true) {
         this.name = name;
         this.capacity = capacity;
         this.availability = {};
         this.timeslots = timeslots;
+        this.videoConf = true;
         this.initializeAvailability(365);
     }
 

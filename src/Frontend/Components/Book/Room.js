@@ -1,5 +1,7 @@
 import BookModal from "../Modal/BookModal";
-import deluxe_room from "../../media/deluxe_room.jpg";
+import adonis from "../../media/adonis.jpg";
+import belmon from "../../media/belmon.jpg";
+import canton from "../../media/canton.jpg";
 import React, {Component} from 'react';
 import '../../Pages/Pages.css';
 import './Room.css';
@@ -24,7 +26,7 @@ class Room extends Component {
 
         // GET THE CURRENTLY SELECTED DATE
         let selectedDate = document.getElementsByClassName("bookmodal__calendar")[0].value;
-        selectedDate=  new Date(selectedDate);
+        selectedDate = new Date(selectedDate);
         selectedDate.setHours(0, 0, 0, 0);
         selectedDate = selectedDate.toISOString();
 
@@ -38,9 +40,9 @@ class Room extends Component {
 
     render() {
         const title = `Book ${this.props.name} Room`;
+        const images = {"adonis" : adonis, "belmon" : belmon, "canton" : canton};
         return (
             <React.Fragment>
-
                 {/*DISPLAY BOOKING CONFIRMATION MODAL*/}
                 {this.state.bookModal && (
                     <BookModal
@@ -54,10 +56,11 @@ class Room extends Component {
 
                 {/*DISPLAY LIST OF ROOMS AVAILABLE FOR BOOKING*/}
                 <li key={this.props.name} className="rooms__list-item">
-                    <div>
-                        <img src={deluxe_room} alt="deluxe_room"/>
+                    <div style={{background: "#ffffff", border: "0.5px solid #CCCCCC"}}>
+                        <img src={images[this.props.room.name.toLowerCase()]} alt={this.props.room.name}/>
                         <h1>{this.props.name}</h1>
-                        <p>Up to {this.props.capacity} guests</p>
+                        <p>Seating Capacity : {this.props.room.capacity}</p>
+                        <p>Video Conferencing : {this.props.room.videoConf ? "Yes" : "No"}</p>
                         <button onClick={this.openModal}>Book</button>
                     </div>
                 </li>

@@ -10,10 +10,10 @@ const MainNavigation = props => (
         <nav className="main-navigation__items">
             <ul>
                 <li>
-                    <NavLink to="/book">Book A Room</NavLink>
+                    <NavLink to="/book">Book</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/bookings">View My Bookings</NavLink>
+                    <NavLink to="/bookings">My Bookings</NavLink>
                 </li>
             </ul>
         </nav>

@@ -8,9 +8,9 @@ class Company {
     };
 
     initializeRooms = () => {
-        const room1 = new Room("Adonis", 10);
-        const room2 = new Room("Belmon", 20);
-        const room3 = new Room("Canton", 50);
+        const room1 = new Room("Adonis", 25);
+        const room2 = new Room("Belmon", 5, 12, false);
+        const room3 = new Room("Canton", 16);
         this.addRoom(room1);
         this.addRoom(room2);
         this.addRoom(room3);

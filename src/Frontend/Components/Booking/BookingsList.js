@@ -18,7 +18,7 @@ class BookingsList extends Component {
             );
         });
         return (
-            <ul className="booking__list">{bookings}</ul>
+            <ul className="bookings__list">{bookings}</ul>
         )
     }
 }

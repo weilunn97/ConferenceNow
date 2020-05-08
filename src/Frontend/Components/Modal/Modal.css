@@ -14,12 +14,13 @@
 
 .modal__header {
   padding: 1rem;
-  background: #5101d1;
+  background: #192a56;
   color: white;
 }
 
 .modal__header h1 {
-  margin: 0;
+  margin: 0 auto;
+  font-family: Montserrat, serif;
   font-size: 1.25rem;
 }
 
@@ -30,7 +31,12 @@
 .modal__actions {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.modal__actions button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 768px) {

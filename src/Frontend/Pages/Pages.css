@@ -1,35 +1,51 @@
 .pages {
     position: relative;
+    color: #0085ff;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
-    border: 1px solid #5101d1;
     padding: 1rem;
-    margin: 2rem auto;
-    width: 30rem;
-    max-width: 80%;
-    top: 4.2rem;
+    margin: auto;
+    width: 50vw;
+    top: 20vh;
+    font-size: 2rem;
 }
 
+.pages > p {
+    font-family: "Montserrat", sans-serif;
+    color: #555555;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    width: 50vw;
+    top: 25vh;
+    font-size: 1rem;
+}
+
+.footer {
+    background-color: #192a56;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    padding: 3vh;
+    margin-top: 100vh;
+    text-align: center;
+}
 button {
-    background-color: #f6e58d;
-    border-radius: 25px;
-    border: none;
-    margin-left: 25px;
-    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #192a56;
+    border-radius: 5px;
+    color: #192a56;
     cursor: pointer;
     font-size: 11px;
     font-weight: 700;
     height: 40px;
     letter-spacing: 2px;
-    outline: none;
     text-transform: uppercase;
-    transition: all 0.3s ease 0s;
-    width: 150px;
+    width: 8vw;
 }
 
 button:hover {
-    background-color: #0e8c7f;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.8);
+    background-color: #192a56;
     color: #fff;
-    transform: translateY(-7px);
 }
 

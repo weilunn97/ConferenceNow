@@ -30,7 +30,7 @@ class BookPage extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{backgroundColor: "#F5F5F5 "}}>
                 {/*DISPLAY BOOKING SUCCESS MESSAGE*/}
                 {this.state.bookedRoom && (
                     <Snackbar open={this.state.bookingSuccess} autoHideDuration={5000}
@@ -41,11 +41,17 @@ class BookPage extends Component {
                     </Snackbar>)}
 
                 {/*DISPLAY AVAILABLE ROOMS PAGE*/}
-                <div className="pages">{this.props.company.name} Meeting Rooms</div>
+                <div className="pages">Conference Rooms
+                    <p>These are the rooms currently available for booking.</p>
+                </div>
                 <RoomList
+                    className="room__list"
                     company={this.props.company}
                     user={this.props.user}
                     bookRoomHandler={this.bookRoomHandler}/>
+
+                {/*DISPLAY OUR FOOTER*/}
+                <div className="footer">© 2020 JourneyWithJed</div>
             </div>
         );
     }

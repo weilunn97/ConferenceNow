@@ -1,9 +1,11 @@
 import {generateTime} from "../../helpers/helpers";
 import Modal from "../Modal/Modal";
 import React, {Component} from 'react';
-import deluxe_room from "../../media/deluxe_room.jpg";
-import './Booking.css';
 import '../../Pages/Pages.css';
+import '../Booking/Booking.css'
+import adonis from "../../media/adonis.jpg";
+import belmon from "../../media/belmon.jpg";
+import canton from "../../media/canton.jpg";
 
 
 class Booking extends Component {
@@ -28,6 +30,7 @@ class Booking extends Component {
 
     render() {
         const title = `Cancel ${this.props.room.name} Booking`;
+        const images = {"adonis" : adonis, "belmon" : belmon, "canton" : canton};
         const meetingStartDate = new Date(this.props.date).toDateString();
         let meetingStartTime;
         if (this.props.timeslot < 12) {
@@ -50,8 +53,8 @@ class Booking extends Component {
 
                 {/*DISPLAY LIST OF CURRENT BOOKINGS*/}
                 <li className="bookings__list-item">
-                    <div>
-                        <img src={deluxe_room} alt="deluxe_room"/>
+                    <div style={{background: "#ffffff", border: "0.5px solid #CCCCCC"}}>
+                        <img src={images[this.props.room.name.toLowerCase()]} alt={this.props.room.name}/>
                         <h1>{this.props.room.name}</h1>
                         <p>{meetingStartDate}, {meetingStartTime}</p>
                         <button onClick={this.openModal}>Cancel Booking</button>
