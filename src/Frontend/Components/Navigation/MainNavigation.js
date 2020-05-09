@@ -4,8 +4,8 @@ import './MainNavigation.css';
 
 const MainNavigation = props => (
     <header className="main-navigation">
-        <div className="main-navigation__logo">
-            <h1>ConferenceNow</h1>
+        <div>
+            <NavLink className="main-navigation__logo" to="/">ConferenceNow</NavLink>
         </div>
         <nav className="main-navigation__items">
             <ul>
