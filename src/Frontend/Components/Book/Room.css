@@ -1,6 +1,6 @@
 .rooms__list-item {
     margin: 0 auto;
-    margin-top: 80vh;
+    margin-top: 26em;
     width: 90vw;
     height: 55vh;
 }
@@ -26,10 +26,11 @@
 }
 
 .rooms__list-item button {
-    position: relative;
-    left: 46%;
-    margin-top: 2vh;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
     margin-bottom: 3vh;
     font-family: Montserrat, serif;
+    text-align: center;
 }
 

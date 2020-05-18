@@ -4,7 +4,7 @@
     font-family: "Montserrat", sans-serif;
     text-align: center;
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
     width: 50vw;
     top: 20vh;
     font-size: 2rem;
@@ -15,7 +15,7 @@
     color: #555555;
     text-align: center;
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
     width: 50vw;
     top: 25vh;
     font-size: 1rem;
@@ -30,18 +30,19 @@
     margin-top: 100vh;
     text-align: center;
 }
+
 button {
     background-color: #ffffff;
-    border: 1px solid #192a56;
-    border-radius: 5px;
+    border: 0.1em solid #192a56;
+    border-radius: 0.3em;
     color: #192a56;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 0.7em;
     font-weight: 700;
-    height: 40px;
-    letter-spacing: 2px;
+    height: 3.5em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    width: 8vw;
+    width: 7rem;
 }
 
 button:hover {

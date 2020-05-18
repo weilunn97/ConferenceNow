@@ -40,11 +40,14 @@ class BookModal extends Component {
                 </header>
 
                 {/*DISPLAY DATE PICKER*/}
-                <DatePicker className="bookmodal__calendar"
-                    selected={this.state.selectedDate}
-                    onChange={this.changeDate}
-                    minDate={new Date()}
-                    maxDate={new Date().setFullYear(new Date().getFullYear() + 1)}/>
+                <div className="bookmodal__calendar">
+                    <DatePicker className="bookmodal__datepicker_input"
+                        selected={this.state.selectedDate}
+                        onChange={this.changeDate}
+                        popperPlacement="bottom-end"
+                        minDate={new Date()}
+                        maxDate={new Date().setFullYear(new Date().getFullYear() + 1)}/>
+                </div>
 
                 {/*DISPLAY TIMESLOT PICKER ONLY IF DATES HAVE BEEN SELECTED*/}
                 {this.state.availability && (

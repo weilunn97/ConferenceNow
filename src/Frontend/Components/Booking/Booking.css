@@ -1,42 +1,43 @@
 .bookings__list-item {
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 7em;
 }
 
 .bookings__list-item div {
-    width: 90vw;
-    height: 35vh;
+    height: 36vh;
+    width: 100%;
+    margin-top: -4em;
 }
 
 .bookings__list-item img {
     width: 35vw;
-    height: 35vh;
+    height: 36vh;
 }
 
 .bookings__list-item h1 {
-    position: relative;
     color: #192a56;
-    left: 69%;
-    top: -33vh;
     font-family: Montserrat, serif;
     font-size: 1.2rem;
+    left: 22%;
+    position: relative;
+    text-align: center;
+    top: -95%;
 }
 
 .bookings__list-item p {
-    position: relative;
     color: #555555;
     font-family: Montserrat, serif;
-    left: 64%;
-    top: -33vh;
-    margin-top: 4vh;
+    left: 22%;
+    position: relative;
+    text-align: center;
+    top: -95%;
 }
 
 .bookings__list-item button {
+    display: block;
+    left: 64%;
     position: relative;
-    font-family: Montserrat, serif;
-    left: 65%;
-    top: -33vh;
-    width: 14vw;
-    margin-top: 4vh;
+    text-align: center;
+    width: 15em;
+    top: -80%;
 }
-

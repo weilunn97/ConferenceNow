@@ -1,16 +1,21 @@
 .timeslot-picker {
-    position: relative;
-    top: 2rem;
+    display: inline;
+    position: absolute;
+    margin: 0 auto;
+    top: 10em;
+    left: -5%;
     height: 3vh;
-    width: 90vw;
+    text-align: center;
 }
 
 .timeslot-picker .top-row {
+    width: 100%;
     margin: 3rem;
     margin-top: 0rem;
 }
 
 .timeslot-picker .bottom-row {
+    width: 100%;
     margin: 3rem;
 }
 
@@ -22,16 +27,16 @@
     color: #192a56;
     cursor: pointer;
     font-family: Montserrat, serif;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: 500;
-    height: 3rem;
+    height: 10vh;
     letter-spacing: 2px;
     margin-left: 1rem;
     outline: none;
     text-transform: uppercase;
     transition: none;
     transform: none;
-    width: 8rem;
+    width: 12vw;
 }
 
 .timeslot-selected, .timeslot-selected:hover {
@@ -42,16 +47,16 @@
     color: #ffffff;
     cursor: pointer;
     font-family: Montserrat, serif;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: 500;
-    height: 3rem;
+    height: 10vh;
     letter-spacing: 2px;
     margin-left: 1rem;
     outline: none;
     text-transform: uppercase;
     transition: none;
     transform: none;
-    width: 8rem;
+    width: 12vw;
 }
 
 .timeslot-inactive, .timeslot-inactive:hover {
@@ -62,14 +67,14 @@
     color: #777777;
     cursor: default;
     font-family: Montserrat, serif;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: 500;
-    height: 3rem;
+    height: 10vh;
     letter-spacing: 2px;
     margin-left: 1rem;
     outline: none;
     text-transform: uppercase;
     transform: none;
     transition: none;
-    width: 8rem;
+    width: 12vw;
 }

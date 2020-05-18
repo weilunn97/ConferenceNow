@@ -5,6 +5,7 @@ import canton from "../../media/canton.jpg";
 import React, {Component} from 'react';
 import '../../Pages/Pages.css';
 import './Room.css';
+import '../Modal/BookModal.css';
 
 class Room extends Component {
     state = {
@@ -25,7 +26,7 @@ class Room extends Component {
         });
 
         // GET THE CURRENTLY SELECTED DATE
-        let selectedDate = document.getElementsByClassName("bookmodal__calendar")[0].value;
+        let selectedDate = document.getElementsByClassName("bookmodal__datepicker_input")[0].value;
         selectedDate = new Date(selectedDate);
         selectedDate.setHours(0, 0, 0, 0);
         selectedDate = selectedDate.toISOString();
@@ -45,7 +46,7 @@ class Room extends Component {
             <React.Fragment>
                 {/*DISPLAY BOOKING CONFIRMATION MODAL*/}
                 {this.state.bookModal && (
-                    <BookModal
+                    <BookModal className="bookmodal"
                         title={title}
                         room={this.props.room}
                         canCancel
